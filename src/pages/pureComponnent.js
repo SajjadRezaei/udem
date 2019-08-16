@@ -21,6 +21,12 @@ constructor(props){
 //3 before render
 componentWillMount(){
     console.log("3 before render");
+ 
+//    const questions = (await axios.get('http://localhost:8081/')).data;
+//     this.setState({
+//       questions,
+//     });
+ 
 }
 componentDidUpdate(){
     console.log("After Update");
