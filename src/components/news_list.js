@@ -9,7 +9,7 @@ const NewsList=(props)=>{
           <div key={item.id}>
 
                {props.children}
-               <NewsItem  item={item}/>
+               <NewsItem  item={item} url="/posts/"/>
                
           </div>  
    

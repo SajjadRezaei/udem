@@ -1,9 +1,11 @@
 import React from "react";
+import {Link} from "react-router-dom";
+
 import {css} from "glamor";
 import classes from '../styles/styles.css';
 
 
-const NewsItem=({item})=>{
+const NewsItem=({item,url})=>{
 
     // let news_item= css({
     //     padding: '20px',
@@ -16,13 +18,19 @@ const NewsItem=({item})=>{
     // let item_grey=css({
     //     background:'lightgrey'
     // });
-
+    console.log(url);
     return(
         // <div  {...news_item} {...item_grey}>
 
+
+      
         <div  className={classes.new_item}>
             <h3>{item.title}</h3>
             <div>{item.feed}</div>
+            <Link to={{
+                pathname:`${url+item.id}`
+               }}>take me to show this posts </Link>
+
        </div>
     )
 }

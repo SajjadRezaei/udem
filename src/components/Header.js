@@ -1,6 +1,6 @@
 import React from "react";
 
-import '../styles/styles.css';
+import classes from '../styles/styles.css';
 
 class Header  extends React.Component{
         constructor(props){
@@ -26,10 +26,8 @@ class Header  extends React.Component{
     }
     
     render(){
-        console.log(this.state.keywords);
-
+       
         // const style={ background:'red'};
-
         // if(this.state.keywords!==""){
         //      style.background='red';
         // }else{
@@ -37,12 +35,11 @@ class Header  extends React.Component{
         // }
 
 
-
         return(
             // style={{background:`${this.state.active?'red':'blue'}`}} className={this.state.className}
             <header >
-                <div className="logo">logo</div>
-                <input type="text" onChange={this.inputChangeHandler}></input>
+                <div className={classes.log}>logo</div>
+                <input type="text" onChange={this.props.keywords}></input>
                 <div>{this.state.title}</div>
                 <div>{this.state.keywords}</div>
 
